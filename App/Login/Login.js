@@ -21,7 +21,7 @@ const Login = ({ onPress }) => {
         placeholder='password'
       />
 
-      <ButtonComp onPress={()=> { onPress() }}/>
+      <ButtonComp text="Continue As Guest" onPress={()=> { onPress() }}/>
     </View>
   )
 }

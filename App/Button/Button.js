@@ -13,11 +13,13 @@ class ButtonComp extends Component {
     return (
       <TouchableHighlight
         onPress={() => { this.props.onPress() }}
+        onGuide={() => { this.props.onGuide() }}
+        goBack={() => { this.props.goBack() }}
         underlayColor="transparent"
         activeOpacity={0.7}
         >
       <View>
-        <Text style={styles.buttonText}>Continue As Guest</Text>
+        <Text style={styles.buttonText}>{this.props.text}</Text>
       </View>
     </TouchableHighlight>
     );

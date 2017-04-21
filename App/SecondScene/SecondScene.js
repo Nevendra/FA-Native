@@ -8,7 +8,7 @@ import {
   View
 } from 'react-native';
 
-const secondScene = ({ onPress, goBack }) => {
+const secondScene = ({ onPress, goBack, onGuide}) => {
   return(
     <View style={styles.container}>
       <View style={styles.container}>
@@ -24,6 +24,11 @@ const secondScene = ({ onPress, goBack }) => {
         <Button
           title='go back'
           onPress={goBack}
+          style={styles.button}
+        />
+        <Button
+          title='go Guide'
+          onPress={onGuide}
           style={styles.button}
         />
       </View>

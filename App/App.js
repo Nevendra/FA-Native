@@ -11,6 +11,7 @@ import {
 import Login from './Login/Login.js'
 import SecondScene from './SecondScene/SecondScene.js'
 import FACamera from './Camera/FACamera.js'
+import Guide from './Guide/Guide.js'
 
 const {
   CardStack: NavigationCardStack,
@@ -72,7 +73,15 @@ export default class App extends Component {
     return <SecondScene
             goBack={this.handleBackAction.bind(this)}
             onPress={this._handleAction.bind(this,
-            { type: 'push', key: 'Camera' })} />
+            { type: 'push', key: 'Camera' })} 
+            onGuide={this._handleAction.bind(this, 
+            { type: 'push', key: 'Guide' })}
+            />
+  }
+  if(key === 'Guide'){
+    return <Guide 
+            goBack={this.handleBackAction.bind(this)}
+            />
   }
   if (key === 'Camera') {
     return <FACamera
